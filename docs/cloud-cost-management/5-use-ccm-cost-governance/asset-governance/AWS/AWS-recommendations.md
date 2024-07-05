@@ -6,6 +6,13 @@ description: This topic describes recommendations for AWS
 
 Recommendations help kickstart your journey with governance. Essentially, Harness run certain policies behind the scenes to generate recommendations for your governance-enabled AWS accounts. These policies not only help to cut costs but also increase the efficiency of your system. On the Governance Overview page, Harness showcases recommendations that will benefit you to save costs on associated resources. You can click on any recommendation to view its details. 
 
+:::note
+Recommendations are now available per cloud account and per region level, helping manage the Jira lifecycle for a recommendation and Ignore List for a recommendation on a granular level.
+
+Moreover, Recommendations can be filtered using cloud account ID and action types are associated with the particular recommendation. Filter, search, and copy functionality is also provided on the Recommendation Terminal.
+:::
+
+
 Listed below are the custodian policies which are used to generate recommendations that Harness offers for AWS. Along with each policy, you can also find their respective descriptions, the logic behind savings computation and the permissions required to generate or apply these recommendations.
 
 
