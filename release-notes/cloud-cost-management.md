@@ -23,9 +23,9 @@ Harness deploys changes to Harness SaaS clusters on a progressive basis. This me
 ### Version 1.23.0
 
 #### New features and enhancements
-- Asset Governance Recommendations page enhancements: Previously, Governance Recommendations were grouped by Account and Region for AWS, Subscription and Region for Azure and Project for GCP. Now, each Account-Region pair, Subscription-Region pair and Project will have individual recommendations listed in the Recommendations Overview page. This would allow users to create individual Jira/ServiceNow tickets per pair and "Recommended Action" now shows the rule name that is recommended.
+- Asset Governance Recommendations page enhancements: Previously, Governance Recommendations were grouped by Account and Region for AWS, Subscription and Region for Azure and Project for GCP. Now, each Account-Region pair, Subscription-Region pair and Project will have individual recommendations listed in the Recommendations Overview page. This would allow users to create individual Jira/ServiceNow tickets per new split recommendation. Also would allow user to ignore recommendation at much granular level. Recommended Action now shows the governance rule name for which recommendation is generated.
 
-- Memory Metrics Tooltip for EC2 Recommendations: Added a tooltip to EC2 recommendations to give more information on memory metrics. This tooltip provides documentation on what users need to do to enable memory metrics, ensuring they understand how to gather necessary data for accurate recommendations, especially for memory-optimized instance families.
+- Memory Metrics Tooltip for EC2 Recommendations: Added a tooltip to EC2 recommendations to give more information on memory metrics. This tooltip provides documentation on what users need to do to enable memory metrics, ensuring they understand how to gather necessary data for accurate recommendations, especially for memory-optimized instance families. 
 
 - Disabled Enforcements for Accounts without a Valid CCM License: We have disable Enforcements related to accounts that do not have a valid CCM license.
 
