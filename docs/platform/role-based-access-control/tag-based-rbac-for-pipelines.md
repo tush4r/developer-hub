@@ -34,7 +34,9 @@ Before you start, define a consistent tagging strategy. For example,
 
 ### Step 2: Update your resource
 
+Next, tag your resources.
 
+To learn how to tag pipelines, go to: [Tags reference](/docs/platform/references/tags-reference).
 
 
 You can manage RBAC for your pipelines with help of tags.
