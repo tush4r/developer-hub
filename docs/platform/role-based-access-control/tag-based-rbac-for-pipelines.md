@@ -1,18 +1,51 @@
 ---
-title: Manage Pipeline with Tag Based RBAC
-description: Manage RBAC for your pipelines with help of tags
+title: Manage resources with tag-based RBAC
+description: Manage RBAC for your resources with help of tags.
 sidebar_position: 130
 ---
 
+## Introduction
+
+Tag-based RBAC allows you to fine-tine access control for your Harness resources including:
+
+- Pipelines
+- Feature flags
+- GitOps applications
+
+This ensures that the right teams have the right level of access to their resources. 
+
+## Why use tag-based RBAC?
+
+Tag-based RBAC offers several advantages:
+1. **Granular Control**: Define permissions based on application or resource characteristics rather than just names or namespaces.
+1. **Scalability**: Easily manage permissions for large numbers of applications or resources.
+1. **Consistency**: Ensure uniform access policies across your entire application and project portfolio.
+1. **Flexibility**: Adapt to changing organizational structures and application architectures without major RBAC overhauls.
+
+## Implementing tag-based RBAC
+
+### Step 1: Define your tagging strategy
+
+Before you start, define a consistent tagging strategy. For example,
+
+- `harness.io/env-type: [prod|staging|dev]`
+- `harness.io/team: [frontend|backend|data]`
+- `harness.io/criticality: [high|medium|low]`
+
+### Step 2: Update your resource
+
+
+
+
 You can manage RBAC for your pipelines with help of tags.
 
-Let's discuss this with an example:-
+Let's discuss this with an example:
 
 Suppose you manage three pipelines for different environment each i.e Dev, QA, Production and you want specific users in each environment's pipeline to have a particular access. For example, you want Developers to have Pipeline execute access to Dev, QA pipelines or any other relevant pipelines and Devops Admins to have pipeline execute and edit permission or admin permissions to Production related pipelines. You can have multiple pipelines and you don't want to add each pipelines in a resource group and and give permissions to users. 
 
 Note that, tags are arbitrary key-value pairs that you can apply to Harness applications and application components. As metadata, they enable you to organize, search, and filter Harness entities.
 
-Some example of tags are:-
+Some example of tags are:
 
 1. type: prod
 2. security: high_severity
@@ -52,7 +85,7 @@ Let's take another example, you need to ensure that only DevOps Admins have acce
 Learn more about creating [User groups](./add-user-groups.md) in Harness.
 
 
-## Few important things to note
+## Important
 
 When working with tag-based Resource Groups, the tag used is the one found in the Harness Metadata for the pipeline.
 
