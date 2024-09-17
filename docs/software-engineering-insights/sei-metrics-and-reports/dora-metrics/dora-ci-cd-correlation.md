@@ -238,7 +238,7 @@ In this scenario it is important to ensure both pipelines are using the same art
 * Configure the correct artifact source for the service. 
 * Refer to the same artifact source that is configured in the pipeline service while deploying the artifact. Deploying an artifact for which the artifact source is not configured will result in failure while correlating the CI/CD stage in SEI
 
-:::
+:::note
 Note that SEI natively supports correlation for container image based artifacts. For other artifact types some changes might be required to ensure unique creation of artifact names.
 :::
 
