@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 [Test Intelligence](/docs/continuous-integration/use-ci/run-tests/ti-overview.md) accelerates your test cycles without compromising quality, by running only the unit tests that are relevant to the code changes that triggered the build. Rather than running all test, all the time Instead of always running all unit tests, Harness automatically skips unneeded tests, speeding up your builds. You can also configure Harness TI to automatically split tests and run them in parallel.
 
-You can use this **Test Intelligence** step, also known as the **Test** step, to run unit tests with **Python**, **Ruby**, **Java** and **C#** programming languages.
+You can use this **Test Intelligence** step, also known as the **Test** step, to run unit tests with **Python**, **Ruby**, **Java** , **C#** , **Scala** and **Kotlin** programming languages.
 
 :::note
 
@@ -26,7 +26,6 @@ To use TI for Python, your codebase must be Python 3.
 
 :::
 
-<!-- Doesn't include C#, Kotlin, or Scala yet. -->
 
 ## Configure the Test step
 
@@ -88,87 +87,6 @@ You can use any Docker image from any Docker registry, including Docker images f
 
 </details>
 
-### Compatibility
-
-The following are the languages, OSes & versions that are supported by Harness' Test Intelligence:
-
-<Tabs>
-<TabItem value="Java" label="Java">
-
-## Supported Operating Systems
-
-All cloud available versions of Linux, Windows & Mac are supported.
-
-<details>
-<summary><b>Supported languages</b></summary>
-
-| **Language** | **Minimum Version** |
-| ------------ | ------------------- |
-| Java         | 6+                  |
-| Kotlin       | 1.5+                |
-| Scala        | 2.13+               |
-
-</details>
-
-</TabItem>
-<TabItem value="Ruby" label="Ruby">
-
-## Supported Operating Systems
-
-All cloud available versions of Linux, Windows & Mac are supported.
-
-<details>
-<summary><b>Supported languages</b></summary>
-
-| **Language** | **Minimum Version** |
-| ------------ | ------------------- |
-| Ruby         | 2.7+                |
-
-</details>
-
-</TabItem>
-<TabItem value="Python" label="Python">
-
-## Supported Operating Systems
-
-All cloud available versions of Linux, Windows & Mac are supported.
-
-<details>
-<summary><b>Supported languages</b></summary>
-
-| **Language** | **Minimum Version** |
-| ------------ | ------------------- |
-| Python       | 3+                  |
-
-</details>
-
-</TabItem>
-<TabItem value="C#" label="C#">
-
-## Supported Operating Systems
-
-| **Operating System** | **Supported Versions** | **Architectures** |
-| -------------------- | ---------------------- | ----------------- |
-| Linux/Centos         | 8+                     | AMD64             |
-| Linux/RedHat         | 9+                     | AMD64 & ARM64     |
-| Linux/Debian         | 12+                    | AMD64 & ARM64     |
-| Linux/Suse           | 15.5+                  | AMD64 & ARM64     |
-| Linux/Ubuntu         | 20.04+                 | AMD64 & ARM64     |
-| Alpine               | 3.17+                  | AMD64 & ARM64     |
-| Windows              | TBD                    | AMD64             |
-
-<details>
-<summary><b>Supported Implementations</b></summary>
-
-| **Language**   | **Minimum Version** |
-| -------------- | ------------------- |
-| .Net Core      | 6-8                 |
-| .Net Framework | TBD                 |
-
-</details>
-
-</TabItem>
-</Tabs>
 
 ### Command and Shell
 
@@ -243,7 +161,7 @@ You can add multiple paths. If you specify multiple paths, make sure the files c
 
 :::info
 
-When using .Net, make sure to enable log reporting when running the tests, e.g. `dotnet test -l:trx`, or otherwise no tests would be shown in the **Tests** tab.
+When using **.Net**, make sure to enable log reporting when running the tests, e.g. `dotnet test -l:trx`, or otherwise no tests would be shown in the **Tests** tab.
 
 :::
 
@@ -320,6 +238,90 @@ These settings specify the maximum resources used by the container at runtime. T
 ### Timeout
 
 You can set the step's timeout limit. Once the timeout is reached, the step fails and pipeline execution proceeds according to any [Step Failure Strategy settings](/docs/platform/pipelines/failure-handling/define-a-failure-strategy-on-stages-and-steps) or [Step Skip Condition settings](/docs/platform/pipelines/step-skip-condition-settings.md).
+
+
+## Compatibility
+
+The following are the languages, OSes & versions that are supported by Harness' Test Intelligence:
+
+<Tabs>
+<TabItem value="Java" label="Java">
+
+#### Supported Operating Systems
+
+All cloud available versions of Linux, Windows & Mac are supported.
+
+
+<summary><b>Supported languages</b></summary>
+
+| **Language** | **Minimum Version** |
+| ------------ | ------------------- |
+| Java         | 6+                  |
+| Kotlin       | 1.5+                |
+| Scala        | 2.13+               |
+
+
+
+</TabItem>
+<TabItem value="Ruby" label="Ruby">
+
+#### Supported Operating Systems
+
+All cloud available versions of Linux, Windows & Mac are supported.
+
+
+<summary><b>Supported languages</b></summary>
+
+| **Language** | **Minimum Version** |
+| ------------ | ------------------- |
+| Ruby         | 2.7+                |
+
+
+
+</TabItem>
+<TabItem value="Python" label="Python">
+
+#### Supported Operating Systems
+
+All cloud available versions of Linux, Windows & Mac are supported.
+
+
+<summary><b>Supported languages</b></summary>
+
+| **Language** | **Minimum Version** |
+| ------------ | ------------------- |
+| Python       | 3+                  |
+
+
+
+</TabItem>
+<TabItem value="C#" label="C#">
+
+<summary><b>Supported Operating Systems</b></summary>
+
+
+| **Operating System** | **Supported Versions** | **Architectures** |
+| -------------------- | ---------------------- | ----------------- |
+| Linux/Centos         | 8+                     | AMD64             |
+| Linux/RedHat         | 9+                     | AMD64 & ARM64     |
+| Linux/Debian         | 12+                    | AMD64 & ARM64     |
+| Linux/Suse           | 15.5+                  | AMD64 & ARM64     |
+| Linux/Ubuntu         | 20.04+                 | AMD64 & ARM64     |
+| Alpine               | 3.17+                  | AMD64 & ARM64     |
+| Windows              | TBD                    | AMD64             |
+
+
+<summary><b>Supported Implementations</b></summary>
+
+| **Language**   | **Minimum Version** |
+| -------------- | ------------------- |
+| .Net Core      | 6-8                 |
+| .Net Framework | TBD                 |
+
+
+
+</TabItem>
+</Tabs>
 
 ## Trigger test selection
 
